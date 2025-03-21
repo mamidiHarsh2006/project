@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Food Delivery</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- If you want to add custom CSS -->
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">FoodExpress</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Contact Section -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <div class="row">
+            <!-- Contact Information Section -->
+            <div class="col-md-6">
+                <h4>Get in Touch</h4>
+                <p>If you have any questions or want to inquire about our food delivery services, feel free to reach out to us. We’d love to hear from you!</p>
+                <ul class="list-unstyled">
+                    <li><strong>Email:</strong> support@fooddelivery.com</li>
+                    <li><strong>Phone:</strong> +1 234 567 890</li>
+                    <li><strong>Address:</strong> 123 Food Street, City, Country</li>
+                </ul>
+                <h5>Follow Us:</h5>
+                <div>
+                    <a href="https://facebook.com" class="btn btn-primary btn-sm" target="_blank">Facebook</a>
+                    <a href="https://instagram.com" class="btn btn-danger btn-sm" target="_blank">Instagram</a>
+                    <a href="https://twitter.com" class="btn btn-info btn-sm" target="_blank">Twitter</a>
+                </div>
+            </div>
+
+            <!-- Contact Form Section -->
+            <div class="col-md-6">
+                <h4>Send Us a Message</h4>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="thankYouModal" tabindex="-1" role="dialog" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="thankYouModalLabel">Thank You for Contacting Us!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    We have received your message and will get back to you as soon as possible. Thank you for reaching out to us.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (Optional) -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2025 Food Delivery. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // JavaScript to handle the form submission and trigger the modal
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();  // Prevent the default form submission
+            $('#thankYouModal').modal('show');  // Show the modal
+        });
+    </script>
+</body>
+
+</html>
